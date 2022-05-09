@@ -1,0 +1,325 @@
+<html>
+<head>
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="/styles.css" rel="stylesheet">
+    <script type="text/javascript" src="/scripts.js"></script>
+</head>  
+
+<body onload="changeSlide()">
+
+    <div class="credentials">
+        <h1> DMDOOM</h1>
+        <h2> Wiktor Pieńkowski </h2>
+    </div>
+
+    <div class="buttons">
+        <button class="selected" onclick="revealProjects()" id="projects-button">Projects</button>
+        <button onclick="revealCV()" id="cv-button">CV</button>
+    </div>
+
+    <div class="wrapper">
+        <div class="projects-wrapper" id="projects">
+            <div class="projects">
+
+                <div class="project-tile">
+                    <div class="slideshow">
+                        <div class="slide fade">
+                            <img src="/projects/caldera1.png"> 
+                        </div>
+                        <div class="slide fade">
+                            <img src="/projects/caldera2.png"> 
+                        </div>
+                        <div class="slide fade">
+                            <img src="/projects/caldera3.png"> 
+                        </div>
+                        <div class="slide fade">
+                            <img src="/projects/caldera4.png"> 
+                        </div>
+                        <div class="slide fade">
+                            <img src="/projects/caldera5.png"> 
+                        </div>
+                    </div>
+                    <div class="description">
+                        <h2>Caldera</h2>
+                        <div class="tags">
+                            <div class="tag"><p>Source Engine</p></div>
+                            <div class="tag"><p>Hammer++</p></div>
+                            <div class="tag"><p>TF2</p></div>
+                            <div class="tag"><p>Level Design</p></div>
+                        </div>
+                        <p> Caldera is an Attack/Defense control point level designed around competitive Team Fortress 2 gameplay in mind. The action takes place inside a secret base built inside an active volcano. It was created in Source Engine using Hammer++, an extensive modification of Valve's Hammer editor. Caldera was featured in European Team Fortress 2 League's Highlander Season 26 preseason cup and came in 2nd place in Real Steel Mapper contest organized by Testco.tf. The map gained prominence because of the great amount of viable strategies it allows, making each match unique in it's own right. Currently, Caldera is still in development, awaiting further testing, tournaments, balance adjustments and extended detailing work.</p>
+                        <div class="links">
+                            <a href="https://tf2maps.net/home/" class="fa fa-github" style="font-size:48px; color: white"></a>
+                            <a href="https://youtu.be/1L9T7AP5d30?t=1605" class="fa fa-youtube-play" style="font-size:48px; color: white"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-tile">
+                    <img src="/projects/battleshipduel.gif">
+                    <div class="description">
+                        <h2>Duel</h2>
+                        <div class="tags">
+                            <div class="tag"><p>Java</p></div>
+                            <div class="tag"><p>JavaFX</p></div>
+                        </div>
+                        <p> BattleShipDuel is a 2D two player game programmed in Java using JavaFX. The goal of the game is to score as much hits on the opponent while avoiding flying asteroids. The asteroids themselves can be destroyed; when hit, they split into smaller asteroids and the projectile’s momentum pushes them in the respective direction. All art and sprite animations are of my design.</p>
+                        <div class="links">
+                            <a href="https://github.com/DMDoom/BattleshipDuel" class="fa fa-github" style="font-size:48px; color: white"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-tile">
+                    <img src="/projects/strongholdmc.png">
+                    <div class="description">
+                        <h2>StrongholdMC</h2>
+                        <div class="tags">
+                            <div class="tag"><p>Java</p></div>
+                            <div class="tag"><p>JavaFX</p></div>
+                            <div class="tag"><p>Java Native Interface</p></div>
+                            <div class="tag"><p>Java Native Hook</p></div>
+                            <div class="tag"><p>GHTools</p></div>
+                        </div>
+                        <p> StrongholdMC is a desktop application programmed in Java using JavaFX which purpose is to help in speedruns of a popular video game Minecraft, where each run attempt requires locating an underground stronghold. StrongholdMC takes four measurements in-game as input and calculates estimated position of the stronghold through triangulation, meaning determining the location of a point by forming triangles from known points. Given two lines, the script calculates their point of intersection, angle of intersection, and the number of blocks away from the player. To make the process convienient, the application scans for keyboard input to automatically paste coordinates from the clipboard and hooks to the game process, allowing for a toggleable in-game overlay. Due to limitations of Java, JNI based libraries are used to access lower level functionality.</p>
+                        <div class="links">
+                            <a href="https://github.com/DMDoom/StrongholdMC" class="fa fa-github" style="font-size:48px; color: white"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-tile">
+                    <img src="/projects/dofizjo.png">
+                    <div class="description">
+                        <h2>DoFizjo</h2>
+                        <div class="tags">
+                            <div class="tag"><p>Java</p></div>
+                            <div class="tag"><p>Spring</p></div>
+                            <div class="tag"><p>MVC</p></div>
+                            <div class="tag"><p>JDBC</p></div>
+                            <div class="tag"><p>Thymeleaf</p></div>
+                            <div class="tag"><p>JS HTML CSS</p></div>
+                        </div>
+                        <p> DoFizjo is a website application written in Java using the Spring Framework created for a physical therapy clinic. It utilizes model-view-controller design pattern with a responsive frontend build with HTML, CSS, Javascript and Thymeleaf. The application offers a most basic form of a content management system (CMS), where all content, like blog posts, comments, and home page information, is stored in a database and can be easily modified from the admin panel. Planned features include online registration. The site is accessible under domain name dofizjo.com</p>
+                        <div class="links">
+                            <a href="https://github.com/DMDoom/DoFizjoOpen" class="fa fa-github" style="font-size:48px; color: white"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-tile">
+                    <img src="/projects/fantasytm1.png">
+                    <div class="description">
+                        <h2>FantasyTM</h2>
+                        <div class="tags">
+                            <div class="tag"><p>Java</p></div>
+                            <div class="tag"><p>Spring</p></div>
+                            <div class="tag"><p>Hibernate</p></div>
+                            <div class="tag"><p>JPA</p></div>
+                            <div class="tag"><p>Javascript</p></div>
+                            <div class="tag"><p>Security</p></div>
+                        </div>
+                        <p> FantasyTM is a web application written in Java using the Spring Framework created in effort to drive popularity and audience engagement with e-sport tournaments of a popular video game Trackmania. FantasyTM allows game fans to assemble a virtual and imaginary team composed of proxies of real players of professional trackmania. These virtual teams then compete against each other based on statistical performance of the real players in actual Trackmania games. That performance is then converted into points and totalled. The team with most points and the best scoring fantasy roster wins. In addition to that, FantasyTM also allows for applying temporary buffs to players; e.g. if a team owner is confident that a certain player will perform well on a given map, they can triple the amount of points they will earn this week. Unfortunately, due to recently changed game format, FantasyTM has been delayed and is yet to go live.</p>
+                        <div class="links">
+                            <a href="https://github.com/DMDoom/FantasyTM" class="fa fa-github" style="font-size:48px; color: white"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="spacer"></div>
+            </div>
+        </div>
+
+        <div class="cv-wrapper hidden-right" id="cv">
+            <div class="cv">
+                <div class="grid">
+                    <div class="left-grid-section">
+                        <h2 class="name">Wiktor </br> Pieńkowski</h2>
+                        <div class="left-tile">
+                            <div class="separator-left">
+                                <h3>Dane osobowe</h3>
+                            </div>
+                            <div>
+                                <p style="font-weight: 700;">E-mail:</p>
+                                <p>pienkowski.wiktor@gmail.com</p>
+                            </div>
+                            <div>
+                                <p style="font-weight: 700;">Numer telefonu:</p>
+                                <p>+48 606 643 334</p>
+                            </div>
+                        </div>
+
+                        <div class="left-tile">                      
+                            <div class="separator-left">
+                                <h3>Umiejętności</h3>
+                            </div>
+                            <p>Znajomość języka Java</p>
+                            <p>Znajomość Spring Core/Boot</p>
+                            <p>Znajomość HTML, CSS, Javascript</p>
+                            <p>Znajomość języka SQL</p>
+                            <p>REST, MVC, Hibernate, JPA, Docker</p>
+                            <p>Doświadczenie w pracy z Git, JIRA</p>
+                        </div>
+
+                        <div class="left-tile">
+                            <div class="separator-left">
+                                <h3>Języki</h3>
+                            </div>
+                            <p>Język angielski, poziom zaawansowany, C2</p>
+                            <p>Język polski, poziom natywny</p>
+                        </div>
+
+                        <div class="left-tile">
+                            <div class="separator-left">
+                                <h3>Zainteresowania</h3>
+                            </div>
+                            <p style="text-align: left;">
+                                Judo, e-sport, level design, lingwistyka,
+                                w szczególności badania dot. roli
+                                przekleństw w języku oraz
+                                zastosowania technologi w celach
+                                badawczych                                                        
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="right-grid-section">
+                        <div class="right-tile">
+                            <div class="separator-right">
+                                <h3>Doświadczenie</h3>
+                            </div>
+                            <div class="info-row">
+                                <div class="date">
+                                    <p>obecnie</p>
+                                </div>
+                                <div class="content">
+                                    <p class="occupation">Freelance web development</p>
+                                    <p class="about">m.in projekt i wykonanie strony dofizjo.com</p>
+                                </div>
+                            </div>
+
+                            <div class="info-row">
+                                <div class="date">
+                                    <p>obecnie</p>
+                                </div>
+                                <div class="content">
+                                    <p class="occupation">Level designer</p>
+                                    <p class="about">poziomy do turniejowych rozgrywek gry wideo pt. "Team Fortress 2"</p>
+                                </div>
+                            </div>
+
+                            <div class="info-row">
+                                <div class="date">
+                                    <p>2021-01 – 2022-01</p>
+                                </div>
+                                <div class="content">
+                                    <p class="occupation">Przedstawiciel handlowy i wystawca</p>
+                                    <p class="location">Dideros Games</p>
+                                    <p class="about">m.in. targi Internationale spieletage Spiel '22 oraz Poznań Game Arena '22</p>
+                                </div>
+                            </div>
+
+                            <div class="info-row">
+                                <div class="date">
+                                    <p>2018-01 – 2018-12</p>
+                                </div>
+                                <div class="content">
+                                    <p class="occupation">Tłumacz powieści "Paradoks" Charlie Fletcher</p>
+                                    <p class="location">Fabryka Słów</p>
+                                </div>
+                            </div>
+
+                            <div class="info-row">
+                                <div class="date">
+                                    <p>2014-01 – 2015-12</p>
+                                </div>
+                                <div class="content">
+                                    <p class="occupation">Tester gry planszowej "Atak Zombie"</p>
+                                    <p class="location">Fox Games</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="right-tile">
+                            <div class="separator-right">
+                                <h3>Wykształcenie</h3>
+                            </div>
+                            <div class="info-row">
+                                <div class="date">
+                                    <p>2019-10 – 2021-06</p>
+                                </div>
+                                <div class="content">
+                                    <p class="occupation">Filologia angielska, studia magisterskie</p>
+                                    <p class="location">Uniwersytet Mikołaja Kopernika, Toruń</p>
+                                </div>
+                            </div>
+                            <div class="info-row">
+                                <div class="date">
+                                    <p>2016-10 – 2019-06</p>
+                                </div>
+                                <div class="content">
+                                    <p class="occupation">Filologia angielska, studia licencjackie</p>
+                                    <p class="location">Uniwersytet Mikołaja Kopernika, Toruń</p>
+                                </div>
+                            </div>
+                            <div class="info-row">
+                                <div class="date">
+                                    <p>2013-09 – 2016-05</p>
+                                </div>
+                                <div class="content">
+                                    <p class="occupation">IX LO. w Bydgoszczy, IB World School 2988</p>
+                                    <p class="location">Bydgoszcz</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="right-tile">
+                            <div class="separator-right">
+                                <h3>Dodatkowa działalność</h3>
+                            </div>
+                            <div class="info-row">
+                                <div class="date">
+                                    <p>2019-10 – 2020-6</p>
+                                </div>
+                                <div class="content">
+                                    <p class="activity">Centre for Language Evolution Studies</p>
+                                    <p class="about">Organizacja konferencji EVOLANG</p>
+                                </div>
+                            </div>
+                            <div class="info-row">
+                                <div class="date">
+                                    <p>2010-01 – 2016-01</p>
+                                </div>
+                                <div class="content">
+                                    <p class="activity">Policyjne Towarzystwo Sportowe GWARDIA</p>
+                                    <p class="about">Reprezentacja na zawodach judo oraz pomoc i wdrażanie do treningu nowych członków</p>
+                                </div>
+                            </div>
+                            <div class="info-row">
+                                <div class="date">
+                                    <p>2018-01 – 2020-05</p>
+                                </div>
+                                <div class="content">
+                                    <p class="activity">AZS UMK Toruń</p>
+                                    <p class="about">Reprezentowanie uczelni na zawodach judo</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

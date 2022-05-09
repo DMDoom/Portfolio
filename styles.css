@@ -1,0 +1,379 @@
+:root {
+    --h1Size: 120px;
+    --h2Size: 50px;
+    --h3Size: 35px;
+    --pSize: 18px;
+    --fontFamily: 'Nunito Sans', sans-serif;;
+    --fontColor: #FFFFFF;
+    --backgroundColor: #121212;
+    --tileColor: #181818; /*181818*/
+    --separatorColor: #101010;
+}
+
+body {
+    margin: 0px;
+    background-color: var(--backgroundColor);
+    background-image: url(bg.png);
+}
+
+h1 {
+    font-family: var(--fontFamily);
+    font-size: var(--h1Size);
+    color: var(--fontColor);
+    font-weight: 900;
+    margin: 0px;
+    padding: 0px;
+}
+
+h2 {
+    font-family: var(--fontFamily);
+    font-size: var(--h2Size);
+    color: var(--fontColor);
+    font-weight: 200;
+    margin: 0px;
+    padding: 0px;
+}
+
+h3 {
+    font-family: var(--fontFamily);
+    font-size: var(--h3Size);
+    color: var(--fontColor);
+    font-weight: 700;
+    margin: 0px;
+    padding: 0px;
+}
+
+p {
+    font-family: var(--fontFamily);
+    font-size: var(--pSize);
+    color: var(--fontColor);
+    font-weight: 200;
+    margin: 0px;
+    padding: 0px;
+    text-align: justify;
+}
+
+a {
+    text-decoration: none;
+}
+
+.credentials {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0px;
+    margin-top: 50px;
+}
+
+.credentials h1 {
+    text-align: center;
+}
+
+.credentials h2 {
+    text-align: center;
+}
+
+button {
+    padding: 20px;
+    font-family: var(--fontFamily);
+    font-size: var(--pSize);
+    color: black;
+    font-weight: 300;
+    min-width: 200px;
+    background-color: white;
+    transition: 0.2s ease-in-out;
+
+    /* testink */
+    background-color: black;
+    border-color: white;
+    border-width: 2px;
+    color: white;
+}
+
+button:hover {
+    background-color: white;
+    border-color: black;
+    border-width: 2px;
+    color: black;
+}
+
+.selected {
+    background-color: white;
+    border-color: black;
+    border-width: 2px;
+    color: black;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 75px;
+}
+
+.wrapper {
+    margin-top: 75px;
+    margin-bottom: 75px;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.project-tile {
+    background-color: var(--tileColor);
+    width: 1400px;
+    display: flex;
+    flex-direction: row;
+    /*border-color: white;
+    border-width: 2px;
+    border-style: solid;*/
+}
+
+.project-tile img {
+    height: 500px;
+}
+
+.description {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.tags {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.tag {
+    background-color: #404040;
+    max-width: 250px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.tag p {
+    color: white;
+    text-align: center;
+    font-weight: 300;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+
+.grid {
+    display: grid;
+    /*grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);*/
+    grid-template-columns: 500px;
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.name {
+    font-weight: 700;
+    padding-left: 20px;
+}
+    
+.left-grid-section {
+    grid-area: 1 / 1 / 6 / 2;
+    background-color: var(--tileColor);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.right-grid-section {
+    grid-area: 1 / 2 / 6 / 6;
+    background-color: #F5F5F5;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 25px;
+}
+
+.right-grid-section p {
+    color: black; /* #434955 */
+}
+
+.right-grid-section h3 {
+    color: black; /* #434955 */
+}
+
+.left-tile {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.left-tile p {
+    padding-left: 20px;
+    max-width: 400px;
+}
+
+.separator-left {
+    background-color: var(--separatorColor);
+    padding-left: 20px;
+}
+
+.right-tile {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.separator-right {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #D3D3D3;
+    border-left-style: none;
+    border-right-style: none;
+}
+
+.info-row {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.date {
+    width: 200px;
+}
+
+.date p {
+    font-size: 18px;
+}
+
+.occupation {
+    font-weight: 700;
+}
+
+.location {
+    font-style: italic;
+}
+
+.about {
+    font-size: 18px;
+    max-width: 400px;
+    text-align: left;
+}
+
+.activity {
+    font-style: italic;
+}
+
+.cv-wrapper {
+    max-width: 1250px;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translateX(0px);
+    opacity: 1;
+    transition: all 2s ease;
+
+    /* testink */
+    position: absolute;
+    top: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.projects-wrapper {
+    transform: translateX(0px);
+    opacity: 1;
+    transition: all 2s ease;
+
+    /* testink */
+    position: absolute;
+    top: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.hidden-right {
+    /*display: none;*/
+    position: relative;
+    transform: translateX(300px);
+    opacity: 0;
+    transition: all 2s ease;
+    overflow: hidden;
+
+    /* testink */
+    position: absolute;
+    top: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.hidden-left {
+    /*display: none;*/
+    position: relative;
+    transform: translateX(-300px);
+    opacity: 0;
+    transition: all 2s ease;
+    overflow: hidden;
+
+    /* testink */
+    position: absolute;
+    top: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 10s;
+    animation-name: fade;
+    animation-duration: 10s;
+}
+
+@-webkit-keyframes fade {
+    0%   { opacity: 0; }
+    5%  { opacity: 1; }
+    50%  { opacity: 1; }
+    95%  { opacity: 1; }
+    100% { opacity: 0; }
+}
+  
+@keyframes fade {
+    0%   { opacity: 0; }
+    5%  { opacity: 1; }
+    50%  { opacity: 1; }
+    95%  { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.slide {
+    display: none;
+}
+
+.spacer {
+    height: 200px;
+}
+
+
