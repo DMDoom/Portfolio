@@ -77,13 +77,9 @@ button {
     padding: 20px;
     font-family: var(--fontFamily);
     font-size: var(--pSize);
-    color: black;
     font-weight: 300;
     min-width: 200px;
-    background-color: white;
     transition: 0.2s ease-in-out;
-
-    /* testink */
     background-color: black;
     border-color: white;
     border-width: 2px;
@@ -130,9 +126,6 @@ button:hover {
     width: 1400px;
     display: flex;
     flex-direction: row;
-    /*border-color: white;
-    border-width: 2px;
-    border-style: solid;*/
 }
 
 .project-tile img {
@@ -173,8 +166,6 @@ button:hover {
 
 .grid {
     display: grid;
-    /*grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);*/
     grid-template-columns: 500px;
     grid-template-rows: repeat(5, 1fr);
     grid-column-gap: 0px;
@@ -222,6 +213,7 @@ button:hover {
 .left-tile p {
     padding-left: 20px;
     max-width: 400px;
+    text-align: left;
 }
 
 .separator-left {
@@ -249,8 +241,12 @@ button:hover {
     gap: 50px;
 }
 
+.content p {
+    text-align: left;
+}
+
 .date {
-    width: 200px;
+    min-width: 200px;
 }
 
 .date p {
@@ -277,13 +273,9 @@ button:hover {
 
 .cv-wrapper {
     max-width: 1250px;
-    margin-left: auto;
-    margin-right: auto;
     transform: translateX(0px);
     opacity: 1;
     transition: all 2s ease;
-
-    /* testink */
     position: absolute;
     top: 500px;
     margin-left: auto;
@@ -297,8 +289,6 @@ button:hover {
     transform: translateX(0px);
     opacity: 1;
     transition: all 2s ease;
-
-    /* testink */
     position: absolute;
     top: 500px;
     margin-left: auto;
@@ -309,14 +299,11 @@ button:hover {
 }
 
 .hidden-right {
-    /*display: none;*/
     position: relative;
     transform: translateX(300px);
     opacity: 0;
     transition: all 2s ease;
     overflow: hidden;
-
-    /* testink */
     position: absolute;
     top: 500px;
     margin-left: auto;
@@ -333,8 +320,6 @@ button:hover {
     opacity: 0;
     transition: all 2s ease;
     overflow: hidden;
-
-    /* testink */
     position: absolute;
     top: 500px;
     margin-left: auto;
@@ -374,6 +359,42 @@ button:hover {
 
 .spacer {
     height: 200px;
+}
+
+/* smaller laptop display sizes*/
+@media only screen and (max-width: 1400px) {
+    .project-tile {
+        width: 700px;
+        flex-direction: column;
+    }
+
+    .cv-wrapper {
+        max-width: 1000px;
+    }
+
+    .grid {
+        grid-template-columns: 400px;
+    }
+
+    .info-row {
+        gap: 10px;
+    }
+}
+
+/* mobile display */
+@media only screen and (max-width: 991px) {
+    .project-tile {
+        width: 700px;
+        flex-direction: column;
+    }
+
+    .cv-wrapper {
+        max-width: 800px;
+    }
+
+    .grid {
+        grid-template-columns: 300px;
+    }
 }
 
 
